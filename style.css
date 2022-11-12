@@ -84,6 +84,7 @@ body {
 }
 .info h1 {
   line-height: 1.3;
+  animation: to-left 1.5s ease-in-out;
 }
 .info h1 span {
   color: var(--Soft-violet);
@@ -92,6 +93,7 @@ body {
   margin-top: 2rem;
   color: var(--Slightly-transparent-white);
   line-height: 1.5;
+  animation: to-right 1s ease-in-out;
 }
 .counter {
   display: flex;
@@ -104,12 +106,14 @@ body {
 .counter h3 {
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
+  animation: to-right 1s ease-in-out;
 }
 .counter h4 {
   font-size: 1.3rem;
   color: var(--Slightly-transparent-white);
   font-weight: 400;
   font-family: "Lexend Deca", sans-serif;
+  animation: to-left 1s ease-in-out;
 }
 .image {
   position: relative;
@@ -122,6 +126,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
+  animation: overly 1s ease-in-out;
 }
 @media (max-width: 991px) {
   .box {
@@ -148,5 +153,39 @@ body {
 @media (min-width: 992px) {
   picture img:last-child {
     display: none;
+  }
+}
+@keyframes to-left {
+  from {
+    opacity: 0;
+    transform: translateX(3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes to-right {
+  from {
+    opacity: 0;
+    transform: translateX(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes overly {
+  from {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+  }
+  to {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
   }
 }
