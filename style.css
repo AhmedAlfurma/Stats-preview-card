@@ -142,16 +142,16 @@ body {
     gap: 2rem;
     margin-top: 4rem;
   }
-  picture img:first-child {
+  .image img:first-child {
     display: none;
   }
-  picture img:last-child {
+  .image img:last-child {
     max-width: unset;
     width: 100%;
   }
 }
 @media (min-width: 992px) {
-  picture img:last-child {
+  .image img:last-child {
     display: none;
   }
 }
